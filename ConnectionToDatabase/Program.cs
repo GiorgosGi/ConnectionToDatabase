@@ -11,17 +11,26 @@ namespace ConnectionToDatabase
     {
         static void Main(string[] args)
         {
+            RunQueries();
+
+        }
+
+
+
+
+        private static void RunQueries()
+        {
             string[] sqlQueries1 =
-            {
-                "A list of all the students",
-                "A list of all the trainers", 
-                "A list of all the assignments", 
-                "A list of all the courses", 
-                "All the students per course", 
-                "All the trainers per course",
-                "All the assignments per course",
-                "All the assignments per course per student",
-                "A list of students that belong to more than one courses"
+                        {
+            "A list of all the students",
+            "A list of all the trainers",
+            "A list of all the assignments",
+            "A list of all the courses",
+            "All the students per course",
+            "All the trainers per course",
+            "All the assignments per course",
+            "All the assignments per course per student",
+            "A list of students that belong to more than one courses"
             };
 
             string[] sqlQueries2 =
@@ -37,22 +46,18 @@ namespace ConnectionToDatabase
             "SELECT FirtsName, LastName, COUNT(Classrooms.Studentid) AS NoOfCourses FROM (Students INNER JOIN Classrooms ON Classrooms.Studentid = Students.id) GROUP BY FirtsName, LastName, Classrooms.Studentid HAVING COUNT(Classrooms.Studentid) > 1"
             };
 
-            Console.WriteLine("Press a key to see the SQL queries:");
-            Console.WriteLine();
+            Console.WriteLine("Press a key to see the project's SQL queries:");
             Console.ReadKey();
+            Console.WriteLine();
 
             for (int i = 0; i < sqlQueries2.Length; i++)
             {
-                Console.WriteLine($"SQL query #{i+1}: {sqlQueries1[i]}: ");
+                Console.WriteLine($"SQL query #{i + 1}: {sqlQueries1[i]}: ");
                 DataBaseQueries(sqlQueries2[i]);
                 Console.WriteLine();
-                Console.ReadKey();
             }
-
-
         }
 
-        
         private static void DataBaseQueries(string sqlQuer)
         {
             SqlConnection conn = new SqlConnection("Server =.; Database = IndividualProjectPartB; Trusted_Connection = True;");
