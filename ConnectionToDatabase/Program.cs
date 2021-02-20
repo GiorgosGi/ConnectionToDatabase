@@ -11,6 +11,7 @@ namespace ConnectionToDatabase
     {
         static void Main(string[] args)
         {
+
             RunQueries();
 
             Console.ReadKey();
@@ -23,7 +24,7 @@ namespace ConnectionToDatabase
         private static void RunQueries()
         {
             string[] sqlQueries1 =
-                        {
+            {
             "A list of all the students",
             "A list of all the trainers",
             "A list of all the assignments",
