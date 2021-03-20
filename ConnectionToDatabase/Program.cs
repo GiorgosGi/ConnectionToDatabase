@@ -11,11 +11,8 @@ namespace ConnectionToDatabase
     {
         static void Main(string[] args)
         {
-
             RunQueries();
-
             Console.ReadKey();
-
         }
 
 
