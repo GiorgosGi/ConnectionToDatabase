@@ -15,7 +15,6 @@ namespace ConnectionToDatabase
             Console.ReadKey();
         }
 
-
         private static void RunQueries()
         {
             string[] sqlQueries1 =
