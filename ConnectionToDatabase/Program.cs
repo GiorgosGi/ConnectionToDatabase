@@ -16,8 +16,6 @@ namespace ConnectionToDatabase
         }
 
 
-
-
         private static void RunQueries()
         {
             string[] sqlQueries1 =
