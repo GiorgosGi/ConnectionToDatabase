@@ -73,7 +73,6 @@ namespace ConnectionToDatabase
                         Console.WriteLine("\t{0}\t{1}\t{2}", rdr[0], rdr[1], rdr[2]);
                     }
                 }
-
             }
             catch (Exception ex)
             {
