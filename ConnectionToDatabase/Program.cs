@@ -55,6 +55,7 @@ namespace ConnectionToDatabase
             }
         }
 
+        
         private static void DataBaseQueries(string sqlQuer)
         {
             SqlConnection conn = new SqlConnection("Server =.; Database = IndividualProjectPartB; Trusted_Connection = True;");
